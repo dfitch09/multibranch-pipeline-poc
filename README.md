@@ -9,7 +9,7 @@ docker run --name jenkins-docker --rm --detach ^
   --publish 3000:3000 --publish 2376:2376 ^
   docker:dind
 
-#build a customized blueocean image: /
+#build a customized blueocean image: <br>
 FROM jenkins/jenkins:2.332.2-jdk11
 USER root
 RUN apt-get update && apt-get install -y lsb-release
@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y docker-ce-cli
 USER jenkins
 RUN jenkins-plugin-cli --plugins "blueocean:1.25.3 docker-workflow:1.28"
 
-#run the Jenkins-blueocean container /
+#run the Jenkins-blueocean container <br>
 docker run --name jenkins-blueocean --rm --detach ^
   --network jenkins --env DOCKER_HOST=tcp://docker:2376 ^
   --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 ^
