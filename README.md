@@ -6,3 +6,6 @@ docker run --name jenkins-blueocean --rm --detach ^
   --volume jenkins-docker-certs:/certs/client:ro ^
   --volume "%HOMEDRIVE%%HOMEPATH%":/home ^
   --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.332.2-1
+
+
+  #jenkins container
