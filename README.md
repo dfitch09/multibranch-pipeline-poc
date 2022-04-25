@@ -1,6 +1,6 @@
 # multibranch-pipeline-poc
 
-#run a DinD container: /
+#run a DinD container: <br>
 docker run --name jenkins-docker --rm --detach ^
   --privileged --network jenkins --network-alias docker ^
   --env DOCKER_TLS_CERTDIR=/certs ^
