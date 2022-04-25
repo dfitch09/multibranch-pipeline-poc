@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y docker-ce-cli
 USER jenkins
 RUN jenkins-plugin-cli --plugins "blueocean:1.25.3 docker-workflow:1.28"
 
-#run the Jenkins container
+#run the Jenkins-blueocean container
 
 docker run --name jenkins-blueocean --rm --detach ^
   --network jenkins --env DOCKER_HOST=tcp://docker:2376 ^
